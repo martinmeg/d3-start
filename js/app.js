@@ -26,3 +26,9 @@ d3.select('#bb-list')
 // D3 Selections
 
 d3.selectAll("#sw-paragraphs p").style("color", "red");
+
+// Dynamic Properties
+
+d3.selectAll("#dx-paragraphs p").style("color", function() {
+  return "hsl(" + Math.random() * 360 + ",100%,50%)";
+});
