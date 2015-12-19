@@ -29,6 +29,10 @@ d3.selectAll("#sw-paragraphs p").style("color", "red");
 
 // Dynamic Properties
 
-d3.selectAll("#dx-paragraphs p").style("color", function() {
-  return "hsl(" + Math.random() * 360 + ",100%,50%)";
-});
+d3.selectAll("#dx-paragraphs p")
+    .style("color", function() {
+      return "hsl(" + Math.random() * 360 + ",100%,50%)";
+    })
+    .style("font-weight", function(d, i) {
+        return i % 2 ? "bold" : "thin";
+    });
