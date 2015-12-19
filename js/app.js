@@ -1,3 +1,5 @@
+// Introduction
+
 var data = [
 	'Walter White',
     'Skyler White',
@@ -20,3 +22,7 @@ d3.select('#bb-list')
 	.text(function(d) {
 		return d;
 	});
+
+// D3 Selections
+
+d3.selectAll("#sw-paragraphs p").style("color", "red");
