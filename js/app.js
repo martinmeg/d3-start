@@ -36,3 +36,22 @@ d3.selectAll("#dx-paragraphs p")
     .style("font-weight", function(d, i) {
         return i % 2 ? "bold" : "thin";
     });
+
+// Enter & Exit
+
+// Update…
+var items = d3.select("#artist-list")
+    .selectAll("li")
+    .data(["Eminem", "Linkin Park", "Coldplay", "Maroon 5", "The Beatles"])
+    .text(function(d) {
+        return d + " !";
+    });
+
+// Enter…
+items.enter().append("li")
+    .text(function(d) {
+        return d + " !";
+    });
+
+// Exit…
+items.exit().remove();
