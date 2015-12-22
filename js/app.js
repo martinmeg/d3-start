@@ -14,24 +14,24 @@ var data = [
     'Todd Alquist'
 ];
 
-d3.select('#bb-list')
-	.selectAll('li')
-	.data(data)
-	.enter()
-	.append('li')
+d3.select('#bb-list').selectAll('li')
+    .data(data)
+  .enter()
+  .append('li')
 	.text(function(d) {
 		return d;
 	});
 
 // D3 Selections
 
-d3.selectAll("#sw-paragraphs p").style("color", "red");
+d3.select("#sw-paragraphs").selectAll("p")
+    .style("color", "red");
 
 // Dynamic Properties
 
-d3.selectAll("#dx-paragraphs p")
+d3.select("#dx-paragraphs").selectAll("p")
     .style("color", function() {
-      return "hsl(" + Math.random() * 360 + ",100%,50%)";
+        return "hsl(" + Math.random() * 360 + ",100%,50%)";
     })
     .style("font-weight", function(d, i) {
         return i % 2 ? "bold" : "thin";
